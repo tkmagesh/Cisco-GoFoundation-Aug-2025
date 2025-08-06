@@ -160,3 +160,13 @@ GOOS=darwin GOARCH=arm64 go build 01-hello-world.go # to create a build for mac 
 - switch case
     - fallthrough
 - for
+
+## Functions
+- Can return more than one result
+- Variadic functions
+- Anonymous functions
+- Higher Order Functions (treat functions like data)
+    - Assign functions as values to variables
+    - Pass functions as arguments to other functions
+    - Return functions as return values
+- Deferred functions
