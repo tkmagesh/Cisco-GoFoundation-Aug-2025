@@ -154,3 +154,9 @@ GOOS=darwin GOARCH=arm64 go build 01-hello-world.go # to create a build for mac 
 
 ## iota
 - A group for constants whose values can be auto-generated
+
+## Programming Constructs
+- if else
+- switch case
+    - fallthrough
+- for
