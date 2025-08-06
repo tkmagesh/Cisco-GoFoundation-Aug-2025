@@ -10,7 +10,7 @@ import "fmt"
 
 /* main function */
 func main() {
-	// print("Hello, World!\n")
+	print("Hello, World!\n")
 	// fmt.Print("Hello, World!\n")
 	fmt.Println("Hello, World!")
 }
