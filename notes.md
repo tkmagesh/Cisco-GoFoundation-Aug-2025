@@ -151,3 +151,6 @@ GOOS=darwin GOARCH=arm64 go build 01-hello-world.go # to create a build for mac 
 ### Package Scope
 - Cannot use ":="
 - CAN have unused variables
+
+## iota
+- A group for constants whose values can be auto-generated
