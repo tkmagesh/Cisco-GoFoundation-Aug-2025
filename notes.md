@@ -173,3 +173,9 @@ GOOS=darwin GOARCH=arm64 go build 01-hello-world.go # to create a build for mac 
     - Pass functions as arguments to other functions
     - Return functions as return values
 - Deferred functions
+
+## Collections
+### Array
+- fixed sized typed collection
+### Slice
+### Map
