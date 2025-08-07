@@ -208,3 +208,35 @@ GOOS=darwin GOARCH=arm64 go build 01-hello-world.go # to create a build for mac 
 - Apt to use the "recover()" in deferred functions
 - "recover()" returns the error that was passed as an argument to the "panic()" function
 
+## Modules & Packages
+### Module
+- Any code that need to be versioned and deployed together
+- Any folder that has the go.mod file
+#### go.mod
+- manifest file for the module
+- contains the following
+    - name of the module
+        - advisable to include the 'repo' path
+    - go runtime version the module was created for
+    - references to other dependencies
+- Create
+```shell
+go mod init [module_name]
+```
+
+#### Execute a module
+```shell
+go run ./...
+```
+
+#### Create a build
+```shell
+go build -o [binary_name] ./...
+```
+
+### Package
+- Internal organization of a module
+- Typically a folder
+- Public entities names start with uppercase
+- Private entities names start with lowercase
+
