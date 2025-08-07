@@ -196,4 +196,15 @@ GOOS=darwin GOARCH=arm64 go build 01-hello-world.go # to create a build for mac 
     - errors.New()
     - fmt.Errorf()
 
+## Panic & Recovery
+### Panic
+- Represents the state of the app where the app execution is unable to progress further
+- When panic occurs, the app is shutdown AFTER executing all the scheduled deferred functions
+- Use "panic()" to raise a panic programatically
+- Advisable to pass an "error" (representing the reason for the panic) to the "panic()" function
+
+### Recover
+- Use "recover()" to recover from the panic
+- Apt to use the "recover()" in deferred functions
+- "recover()" returns the error that was passed as an argument to the "panic()" function
 
