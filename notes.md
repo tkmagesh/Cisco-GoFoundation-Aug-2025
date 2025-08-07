@@ -177,6 +177,7 @@ GOOS=darwin GOARCH=arm64 go build 01-hello-world.go # to create a build for mac 
 ## Collections
 ### Array
 - fixed sized typed collection
+
 ### Slice
 - Wrapper on an array
 - Varying sized typed collection
@@ -186,3 +187,5 @@ GOOS=darwin GOARCH=arm64 go build 01-hello-world.go # to create a build for mac 
 ![image](./images/slices.png)
 
 ### Map
+- varying sized typed collection of key/value pairs
+
