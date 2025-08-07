@@ -189,3 +189,11 @@ GOOS=darwin GOARCH=arm64 go build 01-hello-world.go # to create a build for mac 
 ### Map
 - varying sized typed collection of key/value pairs
 
+## Error Handling
+- Errors are values returned from a function
+- Typically, they are objects implementing "error" interface
+- Factory functions
+    - errors.New()
+    - fmt.Errorf()
+
+
