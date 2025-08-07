@@ -182,4 +182,7 @@ GOOS=darwin GOARCH=arm64 go build 01-hello-world.go # to create a build for mac 
 - Varying sized typed collection
 - Use 'append()' to add new items
 - Use 'len()' to get the size
+- Use 'cap()' to get the size of memory allocated
+![image](./images/slices.png)
+
 ### Map
