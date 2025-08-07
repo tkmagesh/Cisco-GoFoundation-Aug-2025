@@ -34,11 +34,16 @@ func main() {
 	fmt.Println("nos2[0] :", nos2[0])
 
 	fmt.Println("Before sorting :", nos)
-	sort( /*  */ )
+	sort(&nos)
 	fmt.Println("After sorting :", nos)
 }
 
-func sort( /*  */ ) {
-	// use bubble sort
-	/*  */
+func sort(list *[5]int) {
+	for i := 0; i < 4; i++ {
+		for j := i + 1; j < 5; j++ {
+			if list[i] > list[j] {
+				list[i], list[j] = list[j], list[i]
+			}
+		}
+	}
 }
