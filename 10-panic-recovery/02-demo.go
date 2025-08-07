@@ -21,14 +21,34 @@ func main() {
 	// divisor := 7
 	// divisor := 0
 	var divisor int
-	fmt.Println("Enter the divisor :")
+	for {
+		fmt.Println("Enter the divisor :")
 
-	// DONT validate the divisor
+		// DONT validate the divisor
 
-	fmt.Scanln(&divisor)
-	quotient, reminder := divide(100, divisor)
-	fmt.Printf("Dividing 100 by %d, quotient = %d and reminder = %d\n", divisor, quotient, reminder)
+		fmt.Scanln(&divisor)
+		if quotient, reminder, err := divideAdapter(100, divisor); err == ErrDivideByZero {
+			fmt.Println("Enter a non zero divisor")
+			continue
+		} else if err != nil {
+			fmt.Println("Unknown error :", err)
+			break
+		} else {
+			fmt.Printf("Dividing 100 by %d, quotient = %d and reminder = %d\n", divisor, quotient, reminder)
+			break
+		}
+	}
 
+}
+
+func divideAdapter(multiplier, divisor int) (quotient, remainder int, err error) {
+	defer func() {
+		if e := recover(); e != nil {
+			err = ErrDivideByZero
+		}
+	}()
+	quotient, remainder = divide(multiplier, divisor)
+	return
 }
 
 // 3rd party library api (can't change the code)
