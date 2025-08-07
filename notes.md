@@ -240,3 +240,34 @@ go build -o [binary_name] ./...
 - Public entities names start with uppercase
 - Private entities names start with lowercase
 
+### Using 3rd Party modules/packages
+#### To get the modules
+```shell
+go get [module_name]
+# ex:
+go get github.com/fatih/color
+```
+**Code downloaded to the GOPATH/pkg/mod folder**
+
+#### To upgrade a dependency
+```shell
+go get -u [module_name]
+# ex:
+go get -u github.com/fatih/color
+```
+
+
+#### To update the references in the go.mod (based on the usage in our code)
+```shell
+go mod tidy
+```
+
+#### To download the dependencies (documented in the go.mod file)
+```shell
+go mod download
+```
+
+#### To localize the dependencies into the app folder
+```shell
+go mod vendor
+```
