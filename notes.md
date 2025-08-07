@@ -178,4 +178,8 @@ GOOS=darwin GOARCH=arm64 go build 01-hello-world.go # to create a build for mac 
 ### Array
 - fixed sized typed collection
 ### Slice
+- Wrapper on an array
+- Varying sized typed collection
+- Use 'append()' to add new items
+- Use 'len()' to get the size
 ### Map
