@@ -281,3 +281,14 @@ func (t UDT /* receiver */) f1(/* ... */){
 
 }
 ```
+
+## Concurrency
+### What is concurrency
+
+**Concurrency is NOT Parallelism**
+
+**Concurrency** A design in which the application has MORE THAN ONE execution path
+
+### sync.WaitGroup
+- Semaphore based counter
+- Has the ability to block the execution of a function until the counter becomes 0
