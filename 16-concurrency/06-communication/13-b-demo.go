@@ -2,21 +2,18 @@ package main
 
 import (
 	"fmt"
-	"sync"
 )
 
+// consumer
 func main() {
 	ch := make(chan int)
-	wg := &sync.WaitGroup{}
-	wg.Add(1)
-	go add(100, 200, wg, ch)
-	wg.Wait()
+	go add(100, 200, ch)
 	result := <-ch
 	fmt.Println("Result :", result)
 }
 
-func add(x, y int, wg *sync.WaitGroup, ch chan int) {
-	defer wg.Done()
+// producer
+func add(x, y int, ch chan int) {
 	result := x + y
 	ch <- result
 }
