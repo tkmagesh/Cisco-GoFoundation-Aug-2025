@@ -271,3 +271,13 @@ go mod download
 ```shell
 go mod vendor
 ```
+
+## Methods
+- Functions with receivers
+- Reciever ?
+    - The type on which the function to act as method
+```go
+func (t UDT /* receiver */) f1(/* ... */){
+
+}
+```
