@@ -294,6 +294,22 @@ func (t UDT /* receiver */) f1(/* ... */){
 
 **Concurrency** A design in which the application has MORE THAN ONE execution path
 
+### Cooperative Multitasking
+![image](./images/cooperative-multitasking.png)
+----
+
+### Preemptive Multitasking
+![image](./images/preemptive-multitasking.png)
+----
+
+### Concurrency Vs Parallelism
+![image](./images/concurrency-vs-parallelism.png)
+----
+
+### Go Concurrency Model
+![image](./images/go-concurrency.png)
+---
+
 ### sync.WaitGroup
 - Semaphore based counter
 - Has the ability to block the execution of a function until the counter becomes 0
