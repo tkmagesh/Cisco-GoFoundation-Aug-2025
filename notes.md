@@ -352,3 +352,6 @@ ch <- 100
 ```go
 data := <- ch
 ```
+
+#### Channel Behavior
+![image](./images/channel-behaviors.png)
