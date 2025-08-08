@@ -61,7 +61,9 @@ func main() {
 	fmt.Println("milk.CreatedAt =", milk.CreatedAt)
 
 	// Try using the below 'Format' and 'ApplyDiscount' functions for 'milk'
-
+	fmt.Println(Format(milk.Product))
+	ApplyDiscount(&milk.Product, 10)
+	fmt.Println(Format(milk.Product))
 }
 
 // return a formatted string of the given product
