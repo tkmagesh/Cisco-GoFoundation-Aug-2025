@@ -9,7 +9,6 @@ import (
 var wg sync.WaitGroup
 
 func main() {
-	panic("dummy panic")
 	wg.Add(10)
 	go f1() // scheduling the execution of f1 through the scheduler to be executed in future
 	f2()
