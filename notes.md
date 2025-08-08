@@ -68,6 +68,11 @@ go build -o [binary_name] [filename.go]
 go run [filename.go]
 ```
 
+### Compile with Escape Analysis (heap)
+```shell
+go build -gcflags="-m" 05-demo.go
+```
+
 ### Cross Compilation
 #### To get the env variables
 ```shell
@@ -292,3 +297,10 @@ func (t UDT /* receiver */) f1(/* ... */){
 ### sync.WaitGroup
 - Semaphore based counter
 - Has the ability to block the execution of a function until the counter becomes 0
+
+### Race Detection
+```shell
+go build -race [filename.go]
+# OR
+go run -race [filename.go]
+```
