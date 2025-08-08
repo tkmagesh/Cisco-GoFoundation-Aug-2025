@@ -320,3 +320,35 @@ go build -race [filename.go]
 # OR
 go run -race [filename.go]
 ```
+
+### Channel (data type)
+- Helps in goroutines `share memory by communiting`
+
+#### Declaration
+```go
+var ch chan int
+```
+
+#### Initialization
+```go
+ch = make(chan int)
+```
+
+#### Declaration & Initialization
+```go
+var ch chan int = make(chan int)
+// OR
+var ch = make(chan int)
+// OR
+ch := make(chan int)
+```
+
+#### Operations (Using the <- operator)
+##### Send Operation
+```go
+ch <- 100
+```
+##### Receive Operation
+```go
+data := <- ch
+```
