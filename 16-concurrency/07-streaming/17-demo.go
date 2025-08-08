@@ -10,19 +10,21 @@ import (
 func main() {
 	ch := make(chan int)
 	go generateNos(ch)
-LOOP:
-	for {
-		if no, isOpen := <-ch; isOpen {
-			fmt.Println(no)
-			continue LOOP
-		}
-		break LOOP
-	}
 	/*
-		for no := range ch {
-			fmt.Println(no)
-		}
+	   LOOP:
+	   	for {
+	   		if no, isOpen := <-ch; isOpen {
+	   			fmt.Println(no)
+	   			continue LOOP
+	   		}
+	   		break LOOP
+	   	}
 	*/
+
+	for no := range ch {
+		fmt.Println(no)
+	}
+
 	fmt.Println("Done!")
 }
 
