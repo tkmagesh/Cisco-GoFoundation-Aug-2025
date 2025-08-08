@@ -27,11 +27,15 @@ func main() {
 	}
 
 	// type assertion using type-switch
-	// x = 100
+	x = 100
 	// x = "Dolor sint nisi commodo velit minim tempor adipisicing non tempor voluptate id nisi culpa anim."
 	// x = true
 	// x = 99.99
-	x = struct{}{}
+	// x = struct{}{}
+	// x = int8(100)
+	x = func() string {
+		return "Hello!"
+	}
 	switch val := x.(type) {
 	case int:
 		fmt.Println("x is an int, x * 2 =", val*2)
@@ -41,6 +45,8 @@ func main() {
 		fmt.Println("x is a bool, !x =", !val)
 	case float64:
 		fmt.Println("x is a float64, x * 0.01 =", val*0.01)
+	case func() string:
+		fmt.Println("x is a func, x() =", val())
 	default:
 		fmt.Println("x is of unknown type")
 	}
